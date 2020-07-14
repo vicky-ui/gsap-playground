@@ -13,7 +13,7 @@
   </head>
   <body>
     <h1><span>GSAP</span> playground</h1>
-    <button id="cta">watch here</button>
+    <button id="cta">click here</button>
 
     <div class="panel">
       <div class="box">
@@ -60,8 +60,10 @@
       document.getElementById("cta").addEventListener("click", function() {
         timeline.reversed(!timeline.reversed());
         if (timeline.reversed()) {
+          document.getElementById("cta").innerHTML = 'click here'
           timeline.reversed();
         } else {
+          document.getElementById("cta").innerHTML = 'click again'
           timeline.play();
         }
       });
